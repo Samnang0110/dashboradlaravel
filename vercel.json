@@ -1,27 +1,27 @@
 {
-  "version": 2,
-  "framework": null,
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.5.1"
-    }
-  },
-  "routes": [
-    {
-      "src": "/build/(.*)",
-      "dest":"/public/$1"
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.1"
+        }
     },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico))",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "api/index.php"
-    }
-  ],
-  "outputDirectory": "public",
-  "env": {
+    "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico))",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "api/index.php"
+        }
+    ],
+    "outputDirectory": "public",
+    "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://myurl.com",
